@@ -48,7 +48,7 @@ const LoginForm = () => {
       {l === 'login' && (
         <div className="min-h-screen flex flex-col overflow-x-hidden overflow-y-auto justify-start items-center bg-slate-900 max-w-screen">
           <h1 className='text-white p-4 text-4xl font-bold mb-8'>Login</h1>
-          <div className=" w-4/6 h-60 gap-2 justify-center p-2 bg-slate-800 flex flex-col items-center">
+          <div className=" lg:w-1/3 sm:w-4/6 h-60 gap-2 justify-center p-2 bg-slate-800 flex flex-col items-center">
             <input 
               type="email" 
               placeholder="Email" 
@@ -77,14 +77,14 @@ const LoginForm = () => {
       {l === 'signup' && (
         <div className="min-h-screen flex flex-col overflow-x-hidden overflow-y-auto justify-start items-center bg-slate-900 max-w-screen">
           <h1 className='text-white p-4 text-4xl font-bold mb-8'>Signup</h1>
-          <div className="w-4/6 h-80 gap-2 justify-center p-2 bg-slate-800 flex flex-col items-center">
+          <div className="lg:w-1/3 sm:w-4/6 h-80 gap-2 justify-center p-2 bg-slate-800 flex flex-col items-center">
             <input 
               type="text" 
               onChange={(e)=>setName(e.target.value)}
               value={name}
               placeholder="Name" 
               required
-              className="w-full  p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
+              className="lg:w-1/3  p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <input 
               type="email" 
@@ -92,7 +92,7 @@ const LoginForm = () => {
               onChange={(e)=>setEmail(e.target.value)}
               required 
               value={email}
-              className="w-full p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
+              className="lg:w-1/3 p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <input 
               type="password" 
@@ -100,7 +100,7 @@ const LoginForm = () => {
               onChange={(e)=>setPassword(e.target.value)}
               required 
               value={password}
-              className="w-full p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
+              className="lg:w-1/3 p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <button onClick={handlesignup}
               className="w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none"
