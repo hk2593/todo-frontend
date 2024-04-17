@@ -55,7 +55,7 @@ const LoginForm = () => {
               value={email}
               required 
               onChange={(e)=>setEmail(e.target.value)}
-              className=" p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
+              className="w-full p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <input 
               type="password" 
@@ -63,10 +63,10 @@ const LoginForm = () => {
               value={password}
               required 
               onChange={(e)=>setPassword(e.target.value)}
-              className="  p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
+              className="w-full  p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <button onClick={handlelogin}
-              className="  py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none"
+              className="w-full  py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none"
             >
               Login
             </button>
@@ -84,7 +84,7 @@ const LoginForm = () => {
               value={name}
               placeholder="Name" 
               required
-              className=" p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
+              className="w-full p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <input 
               type="email" 
@@ -92,7 +92,7 @@ const LoginForm = () => {
               onChange={(e)=>setEmail(e.target.value)}
               required 
               value={email}
-              className=" p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
+              className="w-full p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <input 
               type="password" 
@@ -100,7 +100,7 @@ const LoginForm = () => {
               onChange={(e)=>setPassword(e.target.value)}
               required 
               value={password}
-              className=" p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
+              className="w-full p-2 mb-4 rounded border border-gray-300 focus:outline-none focus:border-blue-500"
             />
             <button onClick={handlesignup}
               className="w-full py-2 px-4 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none"
