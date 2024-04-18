@@ -13,7 +13,7 @@ const Home = () => {
        {token &&<div className=" min-h-screen flex flex-col overflow-x-hidden overflow-y-auto justify-start items-center bg-slate-900 max-w-screen">
       <h1 className='text-white p-4 text-4xl font-bold mb-8'>My Todos</h1>
        
-      <div className="w-4/6 p-2 bg-slate-800 flex justify-center">
+      <div className="w-4/6 rounded-lg p-2 bg-slate-800 flex justify-center">
        <Homepage />
        </div>
       </div>}
