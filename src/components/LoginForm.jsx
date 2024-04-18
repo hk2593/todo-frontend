@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDate, setLogin, setTodos } from '../store/authslice';
 import API_KEY from '../api_key'
-import toast from "react-hot-toast";
+
 
 
 
@@ -21,10 +21,7 @@ const LoginForm = () => {
         headers: {
           'Content-Type': 'application/json', 
         },})
-        console.log("login response",response)
-        if(response.status==400){
-          toast.error(response.response.data.msg);
-        }
+
     dispatch(setLogin({name:response.data.is_email_present.name,token:response.data.token}));
     const t=await axios.get(`${API_KEY}todo/getTodos`, {
       
@@ -50,9 +47,7 @@ const LoginForm = () => {
       if(response.status==200){
         setl('login')
       }
-      if(response.status==400){
-        toast.error(response.response.data.msg);
-      }
+     
   }
 
   return (
