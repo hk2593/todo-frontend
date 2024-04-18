@@ -22,7 +22,7 @@ const LoginForm = () => {
           'Content-Type': 'application/json', 
         },})
         console.log("login response",response)
-        if(response.response.status==400){
+        if(response.status==400){
           toast.error(response.response.data.msg);
         }
     dispatch(setLogin({name:response.data.is_email_present.name,token:response.data.token}));
@@ -50,7 +50,7 @@ const LoginForm = () => {
       if(response.status==200){
         setl('login')
       }
-      if(response.response.status==400){
+      if(response.status==400){
         toast.error(response.response.data.msg);
       }
   }
