@@ -12,14 +12,18 @@ const Calendar = () => {
   
   const formattedDate = `${year}-${month}-${day}`;
   let d1=year+month+day;
+  const dispatch=useDispatch();
+
   
+  const date1=useSelector(state=>state.auth.date) 
+  const date=date1||formattedDate
   console.log(d1);
-  const [d, setD] = useState(formattedDate);
+  const [d, setD] = useState(date);
   const s=d.split('-');
   const d2=s[0]+s[1]+s[2];
   console.log(d2);
-  const dispatch=useDispatch();
-  dispatch(setDate(formattedDate))
+  
+  
   const handleDate = (event) => {
     const selectedDate = event.target.value;
     setD(selectedDate);
