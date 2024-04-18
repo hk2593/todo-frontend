@@ -10,13 +10,13 @@ const Calendar = () => {
   const month = String(todaydate.getMonth() + 1).padStart(2, '0');
   const day = String(todaydate.getDate()).padStart(2, '0');
   
-  const formattedDate = `${year}-${month}-${day}`;
+  
   let d1=year+month+day;
   const dispatch=useDispatch();
 
   
   const date1=useSelector(state=>state.auth.date) 
-  const date=date1||formattedDate
+  const date=date1
   console.log(d1);
   const [d, setD] = useState(date);
   const s=d.split('-');
