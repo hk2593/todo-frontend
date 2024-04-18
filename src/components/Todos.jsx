@@ -148,18 +148,18 @@ const Todos = () => {
                   type="text" 
                   name="updatedTitle" 
                   placeholder="Updated Title" 
-                  className=" p-2 w-36 border rounded-md focus:outline-none focus:border-blue-500"
+                  className=" p-2 w-full border rounded-md focus:outline-none focus:border-blue-500"
                 />
                 <textarea 
                  value={description}
                  onChange={(e)=>setdescription(e.target.value)}
                   name="updatedDescription" 
                   placeholder="Updated Description" 
-                  className=" p-2 w-36 border rounded-md focus:outline-none focus:border-blue-500 mt-4 md:mt-0"
+                  className=" p-2 w-full border rounded-md focus:outline-none focus:border-blue-500 mt-4 md:mt-0"
                 ></textarea>
                 <button onClick={()=>handleUpdate(todo._id)}
                   type="submit" 
-                  className="w-auto md:w-auto px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none mt-4 md:mt-0"
+                  className="w-full md:w-auto px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none mt-4 md:mt-0"
                 >
                   Update Todo
                 </button>
