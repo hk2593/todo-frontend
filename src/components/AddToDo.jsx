@@ -1,25 +1,22 @@
 import React, { useState } from 'react'
 import Button from '@mui/material/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { setTodos, setaddtodo,setDate } from '../store/authslice';
+import { setTodos, setaddtodo } from '../store/authslice';
 import axios from 'axios';
 import API_KEY from "../api_key"
 const AddToDo = () => {
   const addtodo=useSelector(state=>state.auth.addtodo);
-  
-  
-  const [description,setdescription]=useState('');
-  const date=useSelector(state=>state.auth.date)
-  const token=useSelector(state=>state.auth.token);
-  const [d, setD] = useState(date);
+  const [date, setDate] = useState('');
   const [title,setTitle]=useState('');
+  const [description,setdescription]=useState('');
+  
+  const token=useSelector(state=>state.auth.token);
   const handleDate = (event) => {
     const selectedDate = event.target.value;
-    setD(selectedDate);
+    setDate(selectedDate);
   };
   const dispatch=useDispatch();
   const handleAddtodo=()=>{
-    dispatch(setDate(d))
     dispatch(setaddtodo());
  }
   
@@ -64,7 +61,6 @@ const AddToDo = () => {
         type="date" 
         id="date" 
         name="date" 
-        value={d}
         className="border rounded-md p-2" 
         onChange={handleDate}
         />
