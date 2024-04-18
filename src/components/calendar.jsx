@@ -19,6 +19,7 @@ const Calendar = () => {
   const d2=s[0]+s[1]+s[2];
   console.log(d2);
   const dispatch=useDispatch();
+  dispatch(setDate(formattedDate))
   const handleDate = (event) => {
     const selectedDate = event.target.value;
     setD(selectedDate);
