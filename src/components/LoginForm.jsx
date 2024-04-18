@@ -48,7 +48,7 @@ const LoginForm = () => {
       {l === 'login' && (
         <div className="min-h-screen flex flex-col overflow-x-hidden overflow-y-auto justify-start items-center bg-slate-900 max-w-screen">
           <h1 className='text-white p-4 text-4xl font-bold mb-8'>Login</h1>
-          <div className=" lg:w-1/3 sm:w-4/6 h-60 gap-2 justify-center p-2 bg-slate-800 flex flex-col items-center">
+          <div className=" lg:w-1/3 sm:w-4/6 rounded-lg h-60 gap-2 justify-center p-2 bg-slate-800 flex flex-col items-center">
             <input 
               type="email" 
               placeholder="Email" 
@@ -77,7 +77,7 @@ const LoginForm = () => {
       {l === 'signup' && (
         <div className="min-h-screen flex flex-col overflow-x-hidden overflow-y-auto justify-start items-center bg-slate-900 max-w-screen">
           <h1 className='text-white p-4 text-4xl font-bold mb-8'>Signup</h1>
-          <div className="lg:w-1/3 sm:w-4/6 h-80 gap-2 justify-center p-2 bg-slate-800 flex flex-col items-center">
+          <div className="lg:w-1/3 sm:w-4/6 h-80 rounded-lg gap-2 justify-center p-2 bg-slate-800 flex flex-col items-center">
             <input 
               type="text" 
               onChange={(e)=>setName(e.target.value)}
