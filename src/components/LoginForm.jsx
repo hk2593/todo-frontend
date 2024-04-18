@@ -3,19 +3,28 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDate, setLogin, setTodos } from '../store/authslice';
 import API_KEY from '../api_key'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const LoginForm = () => {
   const [l, setl] = useState('login');
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
   const [name,setName]=useState('');
   const dispatch=useDispatch();
- 
+  
+
   const handlelogin=async()=>{
     const response = await axios.post(`${API_KEY}auth/login`,{email,password}, {
         
         headers: {
           'Content-Type': 'application/json', 
         },})
+        if(response.status==400){
+          toast.error(response.data.msg);
+        }
     dispatch(setLogin({name:response.data.is_email_present.name,token:response.data.token}));
     const t=await axios.get(`${API_KEY}todo/getTodos`, {
       
@@ -40,6 +49,9 @@ const LoginForm = () => {
       },})
       if(response.status==200){
         setl('login')
+      }
+      if(response.status==400){
+        toast.error(response.data.msg);
       }
   }
 
